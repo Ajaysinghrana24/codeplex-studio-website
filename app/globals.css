@@ -1,108 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0A0A0A;
-  --foreground: #FFFFFF;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
 }
 
 @theme {
-  --color-background: #0A0A0A;
-  --color-foreground: #FFFFFF;
-  
-  --color-brand-blue: #3B82F6;
-  --color-brand-blue-dark: #2563EB;
-  --color-brand-cyan: #06B6D4;
-  --color-brand-purple: #8B5CF6;
-  --color-success: #10B981;
-  
-  --color-bg-darker: #0A0A0A;
-  --color-bg-dark: #111827;
-  --color-bg-slate: #0F172A;
-  
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #D1D5DB;
-  --color-text-muted: #9CA3AF;
-  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
   --font-sans: var(--font-inter), sans-serif;
 }
 
 body {
-  background-color: #0A0A0A;
-  color: #FFFFFF;
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: var(--font-sans);
-  overflow-x: hidden;
+  min-height: 100vh;
 }
-
-/* Custom Utilities */
-@utility glass-card {
-  background-color: rgba(15, 23, 42, 0.45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-@utility glass-card-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    background-color: rgba(15, 23, 42, 0.65);
-    border-color: rgba(59, 130, 246, 0.4);
-    box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
-    transform: translateY(-4px);
-  }
-}
-
-@utility text-gradient {
-  background: linear-gradient(135deg, #3B82F6 0%, #06B6D4 50%, #8B5CF6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-@utility bg-gradient-brand {
-  background: linear-gradient(135deg, #3B82F6 0%, #06B6D4 50%, #8B5CF6 100%);
-}
-
-@utility border-glow {
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #0A0A0A;
-}
-::-webkit-scrollbar-thumb {
-  background: #1F2937;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #374151;
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Ensure GSAP animated elements have will-change for GPU acceleration */
-.gsap-hero-fade,
-.gsap-heading-fade,
-.gsap-card-item,
-.gsap-slide-left,
-.gsap-slide-right {
-  will-change: transform, opacity;
-}
-
-/* Clip-path text reveal utility for GSAP */
-@utility text-reveal {
-  clip-path: inset(0% 0% 0% 0%);
-}
-
-/* Smooth transition base for glass cards with GSAP hover */
-.glass-card {
-  will-change: transform;
-  transform: translateZ(0);
-}
-
