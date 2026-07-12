@@ -1,7 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import { Send, ArrowUpRight } from "lucide-react";
+import { Send, ArrowUpRight, ArrowRight } from "lucide-react";
+
+const socialLinks = [
+  {
+    name: "Behance",
+    url: "https://behance.net",
+    borderColor: "#1769ff",
+    icon: (
+      <span className="text-sm font-bold font-serif leading-none mt-[-2px] text-[#1769ff]">Bē</span>
+    ),
+  },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com",
+    borderColor: "#0a66c2",
+    icon: (
+      <svg className="w-5 h-5 fill-[#0a66c2]" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com",
+    borderColor: "#c13584",
+    icon: (
+      <svg className="w-5 h-5 fill-none stroke-[#c13584]" viewBox="0 0 24 24" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      </svg>
+    ),
+  }
+];
 
 export default function Hero() {
   return (
@@ -50,41 +83,30 @@ export default function Hero() {
 
           {/* Follow Us On Row */}
           <div className="flex items-center gap-5">
-            <span className="text-sm font-bold text-[#1d233b] uppercase tracking-wider">Follow us on:</span>
-            <div className="flex gap-3">
-              <a
-                href="https://behance.net"
-                target="_blank"
-                rel="noreferrer"
-                className="w-11 h-11 rounded-full bg-[#edf0f6] text-[#1d233b] hover:bg-[#385bb0] hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
-                aria-label="Behance"
-              >
-                <span className="text-sm font-bold font-serif leading-none mt-[-2px]">Bē</span>
-              </a>
-              <a
-                href="https://dribbble.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-11 h-11 rounded-full bg-[#edf0f6] text-[#1d233b] hover:bg-[#385bb0] hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
-                aria-label="Dribbble"
-              >
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.39c-.085-.24-.415-1.07-.97-1.85a18.36 18.36 0 0 0-4.71-3.69 22.38 22.38 0 0 0-3.32-6.19c-.31.06-.61.12-.91.2a24.1 24.1 0 0 1 3.25 5.92 19.34 19.34 0 0 1-5.63 1.3 22.75 22.75 0 0 0-2.8-5.37A10.15 10.15 0 0 0 2.21 9.5c.34.05 1.55.19 3.27.09a24 24 0 0 1 5.09 5.86 17.5 17.5 0 0 1-6.7 1.83c-.02.13-.03.26-.03.4a10.05 10.05 0 0 0 7.84 9.8 19.8 19.8 0 0 0 1.63-5.26 21 21 0 0 0 6.64 1.13c.7 0 1.34-.05 1.94-.13a10.04 10.04 0 0 0 2.28-7.91zM9.46 21.84a17.9 17.9 0 0 1-1.39-4.8 15.6 15.6 0 0 0 5.48-1.57 20 20 0 0 1 1.09 5.56 10.07 10.07 0 0 0-5.18.81zm9.35-3.32a19.78 19.78 0 0 0-1.04-4.82 22.42 22.42 0 0 1 4.14-.14 10.03 10.03 0 0 0-3.1 4.96z" />
-                </svg>
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-11 h-11 rounded-full bg-[#edf0f6] text-[#1d233b] hover:bg-[#385bb0] hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
-                aria-label="Instagram"
-              >
-                <svg className="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </a>
+            <div className="flex items-center gap-2">
+              <span className="relative text-base font-bold text-[#1d233b] tracking-wide inline-block">
+                <span className="relative z-10">Follow us on</span>
+                <span className="absolute bottom-[2px] left-0 right-0 h-[8px] bg-[#fbe790]/80 z-0 rounded-[1px]" />
+              </span>
+              <ArrowRight className="w-[18px] h-[18px] text-[#1d233b]" />
+            </div>
+            <div className="flex gap-4">
+              {socialLinks.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-11 h-11 bg-white flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:scale-110 shadow-sm"
+                  style={{
+                    border: `1.5px solid ${item.borderColor}`,
+                    borderRadius: "50% 50% 50% 0px",
+                  }}
+                  aria-label={item.name}
+                >
+                  {item.icon}
+                </a>
+              ))}
             </div>
           </div>
 
