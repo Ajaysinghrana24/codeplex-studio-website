@@ -52,7 +52,7 @@ export default function Hero() {
 
           {/* Underline & Subtitle */}
           <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
-            <span className="w-16 h-[2px] bg-[#1d233b]" />
+            <span className="hidden lg:inline-block w-16 h-[2px] bg-[#1d233b]" />
             <span className="text-lg sm:text-xl font-semibold text-[#1d233b] tracking-wide">
               Creative Digital Developers
             </span>
