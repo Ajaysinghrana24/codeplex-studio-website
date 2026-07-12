@@ -246,12 +246,12 @@ export default function HeroVisual() {
       </svg>
 
       {/* ================= FOREGROUND IMAGE: MAN ================= */}
-      <div className="absolute bottom-0 left-[45px] w-[310px] h-[390px] z-10 pointer-events-none overflow-visible">
+      <div className="absolute bottom-0 left-[0px] w-[430px] h-[500px] z-10 pointer-events-none overflow-visible">
         {loaded && manSrc && (
           <motion.img
             src={manSrc}
             alt="Smiling man in denim shirt"
-            className="absolute bottom-[-15px] left-1/2 -translate-x-1/2 w-[130%] max-w-none h-auto select-none pointer-events-none"
+            className="absolute bottom-[0px] left-1/2 -translate-x-1/2 w-[130%] max-w-none h-auto select-none pointer-events-none"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.4 }}
