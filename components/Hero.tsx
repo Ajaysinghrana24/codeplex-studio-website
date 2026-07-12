@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Send, ArrowUpRight, ArrowRight } from "lucide-react";
+import HeroVisual from "./HeroVisual";
 
 const socialLinks = [
   {
@@ -112,9 +113,9 @@ export default function Hero() {
 
         </div>
 
-        {/* ================= RIGHT COLUMN: (5/12 parts - Empty for now) ================= */}
-        <div className="lg:col-span-5 flex justify-center items-center h-[350px] sm:h-[400px] lg:h-[450px] w-full mt-8 lg:mt-0 select-none overflow-visible">
-          {/* We will build this next step */}
+        {/* ================= RIGHT COLUMN: (5/12 parts) ================= */}
+        <div className="lg:col-span-5 flex justify-center items-center w-full mt-8 lg:mt-0 select-none overflow-visible">
+          <HeroVisual />
         </div>
 
       </div>
