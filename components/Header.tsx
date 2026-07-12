@@ -71,7 +71,7 @@ export default function Header() {
           <div className="hidden md:block">
             <Link
               href="#contact"
-              className="h-[48px] px-6 inline-flex items-center justify-center border border-[#385bb0] text-sm font-bold text-[#385bb0] hover:text-white hover:bg-[#385bb0] rounded-full transition-all duration-300 active:scale-95 shadow-sm shadow-[#385bb0]/10"
+              className="h-[48px] px-7 inline-flex items-center justify-center border border-[#385bb0] text-sm font-bold text-[#385bb0] hover:text-white hover:bg-[#385bb0] rounded-full transition-all duration-300 active:scale-95 shadow-sm shadow-[#385bb0]/10"
             >
               Contact Now
             </Link>
@@ -131,7 +131,7 @@ export default function Header() {
             <Link
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="h-[48px] px-6 flex w-full items-center justify-center border border-[#385bb0] text-sm font-bold text-[#385bb0] hover:text-white hover:bg-[#385bb0] rounded-full transition-all"
+              className="h-[48px] px-7 flex w-full items-center justify-center border border-[#385bb0] text-sm font-bold text-[#385bb0] hover:text-white hover:bg-[#385bb0] rounded-full transition-all"
             >
               Contact Now
             </Link>
