@@ -246,7 +246,7 @@ export default function HeroVisual() {
       </svg>
 
       {/* ================= FOREGROUND IMAGE: MAN ================= */}
-      <div className="absolute bottom-0 left-[0px] w-[430px] h-[500px] z-10 pointer-events-none overflow-visible">
+      <div className="absolute bottom-0 left-[0px] w-full h-full z-10 pointer-events-none overflow-visible">
         {loaded && manSrc && (
           <motion.img
             src={manSrc}
@@ -261,15 +261,14 @@ export default function HeroVisual() {
 
       {/* ================= CIRCULAR PLAY BADGE ================= */}
       <motion.div
-        className="absolute bottom-[35px] right-[10px] sm:right-[20px] z-20 w-[110px] h-[110px] sm:w-[120px] sm:h-[120px] cursor-pointer"
+        className="absolute bottom-[35px] sm:right-[-20px] right-[10px] z-20 w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] cursor-pointer"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.25, type: "spring", damping: 15 }}
-        whileHover={{ scale: 1.08 }}
       >
         <svg
           viewBox="0 0 120 120"
-          className="w-full h-full animate-spin-slow hover:[animation-duration:10s] transition-[animation-duration] duration-500"
+          className="w-full h-full animate-spin-slow"
         >
           <defs>
             {/* Round path for curved text */}
@@ -281,7 +280,7 @@ export default function HeroVisual() {
           </defs>
 
           {/* Badge Background Circle */}
-          <circle cx="60" cy="60" r="46" fill="#111625" />
+          <circle cx="60" cy="60" r="54" fill="#111625" />
 
           {/* Circular Text */}
           <text>
