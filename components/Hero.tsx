@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="w-full max-w-[85%] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
         {/* ================= LEFT COLUMN: INTRO CONTENT (7/12 parts) ================= */}
-        <div className="lg:col-span-7 flex flex-col items-start text-left">
+        <div className="lg:col-span-7 flex flex-col items-center text-center lg:items-start lg:text-left">
 
           {/* Main Large Title */}
           <h1 className="text-5xl sm:text-6xl lg:text-[72px] font-extrabold tracking-tight text-[#1d233b] mb-4 leading-none select-none">
@@ -51,7 +51,7 @@ export default function Hero() {
           </h1>
 
           {/* Underline & Subtitle */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
             <span className="w-16 h-[2px] bg-[#1d233b]" />
             <span className="text-lg sm:text-xl font-semibold text-[#1d233b] tracking-wide">
               Creative Digital Developers
@@ -64,7 +64,7 @@ export default function Hero() {
           </p>
 
           {/* Action Buttons (12px round = rounded-xl) */}
-          <div className="flex flex-row items-center gap-8 mb-16 flex-wrap">
+          <div className="flex flex-row items-center justify-center lg:justify-start gap-8 mb-16 flex-wrap w-full">
             <Link
               href="#contact"
               className="h-[48px] px-7 inline-flex items-center justify-center gap-3 bg-[#385bb0] hover:bg-[#1d233b] text-white font-bold rounded-full transition-all duration-300 shadow-md shadow-[#385bb0]/10 active:scale-95 text-sm group"
@@ -83,7 +83,7 @@ export default function Hero() {
           </div>
 
           {/* Follow Us On Row */}
-          <div className="flex items-center gap-5">
+          <div className="flex flex-col sm:flex-row items-center gap-5 justify-center lg:justify-start w-full">
             <div className="flex items-center gap-2">
               <span className="relative text-base font-bold text-[#1d233b] tracking-wide inline-block">
                 <span className="relative z-10">Follow us on</span>

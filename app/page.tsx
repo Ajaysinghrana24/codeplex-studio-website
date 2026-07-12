@@ -3,10 +3,10 @@ import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-x-hidden">
       <Header />
       
-      <main className="flex-grow flex flex-col justify-center pt-32 pb-16 md:pt-36 lg:pt-44 lg:pb-24">
+      <main className="flex-grow flex flex-col justify-center pt-32 pb-0 md:pt-36 lg:pt-44 lg:pb-0">
         <Hero />
       </main>
     </div>
