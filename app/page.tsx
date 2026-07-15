@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import About from "@/components/About";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       
       <main className="pt-32 pb-0 md:pt-36 lg:pt-44 lg:pb-0">
         <Hero />
+        <About />
       </main>
     </div>
   );
