@@ -5,32 +5,59 @@ import { ArrowRight } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="w-full bg-[#385bb0] py-20 lg:py-32 overflow-hidden">
+    <section id="about" className="w-full bg-[#385bb0] pt-12 pb-4 lg:pt-20 lg:pb-10 overflow-hidden">
       <div className="w-full max-w-[1400px] mx-auto px-[15px] md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
 
-        {/* LEFT COLUMN: Large Typography Graphic */}
-        <div className="flex justify-center lg:justify-end lg:pr-16 relative">
-          <div className="relative flex flex-col items-center lg:items-start select-none">
+        {/* LEFT COLUMN: Unique Premium Graphic */}
+        <div className="relative w-full aspect-square max-w-[500px] mx-auto lg:mr-auto flex justify-center items-center">
 
-            {/* The Big Number */}
-            <div className="relative inline-block">
-              <span className="text-[180px] sm:text-[220px] lg:text-[280px] font-black leading-[0.8] text-[#f6c845] tracking-tighter drop-shadow-xl">
-                10
-              </span>
+          {/* Abstract Background Blurs */}
+          <div className="absolute top-[15%] left-[15%] w-64 h-64 bg-[#f6c845] rounded-full mix-blend-screen filter blur-[80px] opacity-40 animate-pulse"></div>
+          <div className="absolute bottom-[15%] right-[15%] w-64 h-64 bg-[#1d233b] rounded-full mix-blend-multiply filter blur-[80px] opacity-50 animate-pulse" style={{ animationDelay: "2s" }}></div>
 
-              {/* Overlay Text */}
-              <div className="absolute bottom-[15%] left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-[-15%] bg-[#385bb0] px-3 py-1 lg:px-4 lg:py-2 border-2 border-[#f6c845] rounded-md shadow-lg transform rotate-[-2deg]">
-                <span className="text-white text-sm lg:text-base font-bold tracking-widest uppercase whitespace-nowrap">
-                  Years of Experience
-                </span>
+          {/* The Big Stroke Number (Background) */}
+          <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none overflow-hidden">
+            <span className="text-[250px] sm:text-[350px] font-black text-transparent opacity-20" style={{ WebkitTextStroke: '4px rgba(255,255,255,0.8)' }}>
+              10
+            </span>
+          </div>
+
+          {/* Foreground Glassmorphism Card */}
+          <div className="relative z-10 w-full max-w-[340px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-full bg-[#f6c845] flex items-center justify-center shadow-lg shadow-[#f6c845]/30">
+                <svg className="w-6 h-6 text-[#1d233b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
               </div>
+              <span className="text-white font-bold tracking-widest uppercase text-sm">Experience</span>
             </div>
 
-            {/* Bottom Text replacing 'JOHN SMITH' */}
-            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white/10 tracking-[0.1em] uppercase mt-2 lg:mt-[-10px] z-0 ml-0 lg:ml-[-40px]">
-              CODEPLEX
-            </h2>
+            <h3 className="text-6xl font-black text-white mb-2 tracking-tighter">10<span className="text-[#f6c845]">+</span></h3>
+            <p className="text-white/80 font-medium text-lg leading-snug">Years of shaping digital products and leading innovation.</p>
+
+            <div className="mt-8 pt-6 border-t border-white/20 flex items-center justify-between">
+              <div className="flex -space-x-3">
+                <img src="https://i.pravatar.cc/100?img=11" alt="client" className="w-10 h-10 rounded-full border-2 border-[#385bb0] bg-zinc-200 object-cover" />
+                <img src="https://i.pravatar.cc/100?img=12" alt="client" className="w-10 h-10 rounded-full border-2 border-[#385bb0] bg-zinc-300 object-cover" />
+                <img src="https://i.pravatar.cc/100?img=33" alt="client" className="w-10 h-10 rounded-full border-2 border-[#385bb0] bg-zinc-400 object-cover" />
+                <div className="w-10 h-10 rounded-full border-2 border-[#385bb0] bg-white flex items-center justify-center text-xs font-bold text-[#385bb0]">+1k</div>
+              </div>
+              <div className="text-right">
+                <div className="text-white font-bold text-xl">150+</div>
+                <div className="text-white/60 text-xs uppercase tracking-wider font-semibold">Projects</div>
+              </div>
+            </div>
           </div>
+
+          {/* Floating Element */}
+          <div className="absolute top-[5%] right-[-5%] sm:right-0 bg-[#1d233b] border border-white/10 rounded-2xl p-4 shadow-2xl flex items-center gap-3 animate-bounce shadow-black/40 z-20" style={{ animationDuration: '3s' }}>
+            <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <span className="text-white text-sm font-bold whitespace-nowrap">100% Success</span>
+          </div>
+
         </div>
 
         {/* RIGHT COLUMN: Content */}
