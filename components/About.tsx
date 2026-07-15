@@ -44,7 +44,7 @@ export default function About() {
               <path d="M4.5 3.5L5 5.5L7 6L5 6.5L4.5 8.5L4 6.5L2 6L4 5.5L4.5 3.5Z" fill="currentColor" />
             </svg>
             <h3 className="text-5xl sm:text-6xl lg:text-[72px] font-extrabold tracking-tight leading-none">
-              About us
+              About Us
             </h3>
             <span className="hidden sm:block w-24 h-[2px] bg-white/40 ml-4 rounded-full"></span>
           </div>
@@ -59,7 +59,7 @@ export default function About() {
 
             <Link
               href="#about"
-              className="h-[54px] px-8 inline-flex items-center justify-center gap-3 bg-white hover:bg-zinc-100 text-[#385bb0] font-bold rounded-full transition-all duration-300 shadow-xl active:scale-95 text-base group"
+              className="h-[48px] px-7 inline-flex items-center justify-center gap-3 bg-white hover:bg-zinc-100 text-[#385bb0] font-bold rounded-full transition-all duration-300 shadow-xl active:scale-95 text-sm group"
             >
               <span>Read More</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
