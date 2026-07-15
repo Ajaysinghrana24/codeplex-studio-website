@@ -40,7 +40,7 @@ const socialLinks = [
 export default function Hero() {
   return (
     <section className="relative w-full py-0 select-none">
-      <div className="w-full max-w-[85%] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="w-full max-w-[1400px] mx-auto px-[15px] md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
         {/* ================= LEFT COLUMN: INTRO CONTENT (7/12 parts) ================= */}
         <div className="lg:col-span-7 flex flex-col items-center text-center lg:items-start lg:text-left">

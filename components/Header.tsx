@@ -27,7 +27,7 @@ export default function Header() {
         : "bg-transparent py-6"
         }`}
     >
-      <div className="w-full max-w-[85%] mx-auto">
+      <div className="w-full max-w-[1400px] mx-auto px-[15px] md:px-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
